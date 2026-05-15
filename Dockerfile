@@ -4,6 +4,7 @@ WORKDIR /app
 COPY frontend/package*.json ./
 RUN npm install -g pnpm
 RUN pnpm install
+RUN pnpm add -D serialize-javascript@6.0.2
 COPY frontend/ ./
 RUN pnpm run build
 
